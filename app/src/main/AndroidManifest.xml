@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SQLiteDemoWithListViewTodoApp">
+        <activity android:name=".ui.ListDataActivity"/>
         <activity android:name=".ui.EntryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
