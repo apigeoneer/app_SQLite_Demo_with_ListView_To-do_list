@@ -48,7 +48,7 @@ class EntriesDbHelper(context: Context?) : SQLiteOpenHelper(
         val contentValues = ContentValues()
         // Add first value to Content values
         contentValues.put(COL1, item)
-        Log.d(TAG, "addData: adding $item to $TABLE_NAME...")
+        Log.d(TAG, "addData: adding $item to $TABLE_NAME.")
 
         // Store if the data was entered correctly or not
         val result = db.insert(TABLE_NAME, null, contentValues)
@@ -85,7 +85,7 @@ class EntriesDbHelper(context: Context?) : SQLiteOpenHelper(
      */
     fun updateData(newName: String, id: Int, oldName: String) {
         val db = this.writableDatabase
-        val query = "UPDATE $TABLE_NAME SET $COL1 = '$oldName' WHERE $COL0 = '$id' AND $COL1 = '$oldName"
+        val query = "UPDATE $TABLE_NAME SET $COL1 = '$newName' WHERE $COL0 = '$id' AND $COL1 = '$oldName"
         Log.d(TAG, "updateData: query: $query")
         Log.d(TAG, "updateData: Changing the entry to '$newName'")
         db.execSQL(query)
@@ -101,7 +101,7 @@ class EntriesDbHelper(context: Context?) : SQLiteOpenHelper(
         val query = "DELETE FROM $TABLE_NAME WHERE $COL0 = '$id' AND $COL1 = '$entry'"
         Log.d(TAG, "deleteData: query: $query")
         Log.d(TAG, "deleteData: Deleting $entry from database.")
-        db.execSQL(entry)
+        db.execSQL(query)
     }
 
 }

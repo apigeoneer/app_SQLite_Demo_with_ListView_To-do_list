@@ -27,17 +27,17 @@ class EditDataActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_data)
 
-        etEditEntry = findViewById(R.id.entryEditText)
+        etEditEntry = findViewById(R.id.editEntryEditText)
         btnDelete = findViewById(R.id.deleteButton)
         btnSave = findViewById(R.id.saveButton)
 
         entriesDbHelper = EntriesDbHelper(this)
 
-        // get the intent extra from the ListDataActivity
+        // Get the intent extra from the ListDataActivity
         val receivedIntent = intent
         // Now get the item id & text that was passed as an extra
-        receivedIntent.getIntExtra("id", -1)        // -1 is the default value in case teh id doesn't exist
-        receivedIntent.getStringExtra("entry")
+        selectedId = receivedIntent.getIntExtra("id", -1)        // -1 is the default value in case the id doesn't exist
+        selectedEntry = receivedIntent.getStringExtra("entry").toString()
 
         // Set text to show the current selected item
         etEditEntry.setText(selectedEntry)

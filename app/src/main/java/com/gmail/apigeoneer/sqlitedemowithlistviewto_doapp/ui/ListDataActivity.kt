@@ -69,7 +69,7 @@ class ListDataActivity : AppCompatActivity() {
             }
             if (itemId > -1) {
                 Log.d(TAG, "onItemClicked: The id of the clicked entry item is $itemId")
-                // If everything's okay i.e., the id id received, navigate to th edit data screen
+                // If everything's okay i.e., the id id received, navigate to the edit data screen
                 val editScreenIntent = Intent(this, EditDataActivity::class.java)
                 editScreenIntent.putExtra("id", itemId)
                 editScreenIntent.putExtra("entry", entry)
