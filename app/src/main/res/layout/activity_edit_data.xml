@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/newEntryConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/new_entry_gradient"
-    tools:context=".ui.EntryActivity">
+    android:background="@drawable/new_entry_gradient2"
+    tools:context=".ui.EditDataActivity">
 
     <EditText
-        android:id="@+id/entryEditText"
+        android:id="@+id/editEntryEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="256dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
-        android:hint="Create an entry"
+        android:hint="New entry"
         android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,31 +33,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/entryEditText">
+        app:layout_constraintTop_toBottomOf="@+id/editEntryEditText">
 
         <Button
-            android:id="@+id/addButton"
+            android:id="@+id/deleteButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:backgroundTint="#FFC107"
+            android:backgroundTint="#CDDC39"
             android:elevation="3dp"
-            android:text="Add"
+            android:text="Delete"
             android:textColor="#000000"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/viewButton"
+            android:id="@+id/saveButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:backgroundTint="#FFC107"
+            android:backgroundTint="#CDDC39"
             android:elevation="3dp"
-            android:text="View"
+            android:text="Save"
             android:textColor="#000000"
             android:textSize="16sp" />
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
 
+</androidx.constraintlayout.widget.ConstraintLayout>

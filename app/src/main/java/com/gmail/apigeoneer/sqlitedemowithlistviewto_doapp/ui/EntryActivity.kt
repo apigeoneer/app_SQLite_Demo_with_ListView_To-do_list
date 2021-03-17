@@ -6,12 +6,14 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.gmail.apigeoneer.sqlitedemowithlistviewto_doapp.R
 import com.gmail.apigeoneer.sqlitedemowithlistviewto_doapp.data.EntriesDbHelper
 
 class EntryActivity : AppCompatActivity() {
 
     private lateinit var entriesDbHelper: EntriesDbHelper
+    private lateinit var clNewEntry: ConstraintLayout
     private lateinit var btnAdd: Button
     private lateinit var btnView: Button
     private lateinit var etEntry: EditText
@@ -20,6 +22,10 @@ class EntryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_entry)
+
+        clNewEntry = findViewById(R.id.newEntryConstraintLayout)
+        val animationDrawable = clNewEntry.background
+        // not working , methods not found
 
         btnAdd = findViewById(R.id.addButton)
         btnView = findViewById(R.id.viewButton)
